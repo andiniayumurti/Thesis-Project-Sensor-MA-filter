@@ -4,8 +4,8 @@
 
 //initialize ADC
 Adafruit_ADS1115 ads;
-const int multiplier = 0.1875F;
-int ain0 = 0; int ain1 = 0; int ain2 = 0; int ain3 = 0;
+const float multiplier = 0.1875F;
+float ain0 = 0; float ain1 = 0; float ain2 = 0; float ain3 = 0;
 
 //initialize INA219
 Adafruit_INA219 ina219_1 (0x40);    //Default adress is 0x40
@@ -48,8 +48,8 @@ Serial.begin(9600);
 
 void loop() { 
   //ADC Voltage
-  int16_t adc0, adc1, adc2, adc3;
-  int16_t sen0, sen1, sen2, sen3;
+  float adc0, adc1, adc2, adc3;
+  float sen0, sen1, sen2, sen3;
   adc0 = ads.readADC_SingleEnded(0);
   adc1 = ads.readADC_SingleEnded(1);
   adc2 = ads.readADC_SingleEnded(2);
